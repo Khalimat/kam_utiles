@@ -6,11 +6,13 @@ from pathlib import Path
 def make_fasta_from_seqs_list(AA_seqs, seqs_names,
                               file_name, file_dir):
     """
-    Make a fasta file from lists of AA seqs and ids
+    Make a fasta file from lists of AA seqs and ids and save it
+    in a  given location
 
     :param AA_seqs: list containing strings of AA sequences
     :param seqs_names: list containing strings of seq names
-    :param fasta_name: str, file name
+    :param file_name: str, output file name
+    :param file_dir: str, a dir to save fasta file
     """
     pre_fasta = []
     for seq, seq_name in zip(AA_seqs, seqs_names):
